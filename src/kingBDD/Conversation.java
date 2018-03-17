@@ -7,10 +7,12 @@ import java.util.List;
 public class Conversation implements Serializable {
 
 	private static final long serialVersionUID = -4277959164441740149L;
-	List<String> users;
-	List<Message> messages;
+	private int id;
+	private List<String> users;
+	private List<Message> messages;
 	
-	public Conversation(String username) {
+	public Conversation(int id, String username) {
+		this.id = id;
 		this.users = new LinkedList<String>();
 		this.users.add(username);
 		this.messages = new LinkedList<Message>();
@@ -20,11 +22,15 @@ public class Conversation implements Serializable {
 		this.messages.add(new Message(username, message));
 	}
 	
+	public int getId() {
+		return this.id;
+	}
+	
 	public List<String> getUsers() {
-		return users;
+		return this.users;
 	}
 	
 	public List<Message> getMessages() {
-		return messages;
+		return this.messages;
 	}
 }
