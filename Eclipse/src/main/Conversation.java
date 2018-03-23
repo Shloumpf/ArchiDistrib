@@ -1,4 +1,4 @@
-package kingBDD;
+package main;
 
 import java.io.Serializable;
 import java.util.LinkedList;
@@ -18,8 +18,12 @@ public class Conversation implements Serializable {
 		this.messages = new LinkedList<Message>();
 	}
 	
-	public void addMessage(String username, String message) {
-		this.messages.add(new Message(username, message));
+	public Conversation() {
+		new Conversation(0, "");
+	}
+	
+	public void addMessage(Message message) {
+		this.messages.add(message);
 	}
 	
 	public int getId() {

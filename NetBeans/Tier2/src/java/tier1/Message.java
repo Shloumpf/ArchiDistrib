@@ -1,9 +1,13 @@
-package kingBDD;
+package tier1;
 
+import java.io.Serializable;
 import java.util.Date;
+import javax.xml.bind.annotation.XmlRootElement;
 
-public class Message {
+@XmlRootElement(name = "Message")
+public class Message implements Serializable {
 	
+	private static final long serialVersionUID = 1795432780554687087L;
 	private String senderUsername;
 	private Date date;
 	private String message;
@@ -12,6 +16,10 @@ public class Message {
 		this.senderUsername = senderUsername;
 		this.date = new Date();
 		this.message = message;
+	}
+	
+	public Message() {
+		new Message("", "");
 	}
 	
 	public String getSenderUsername() {

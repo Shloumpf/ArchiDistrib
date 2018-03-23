@@ -1,4 +1,4 @@
-package kingBDD;
+package main;
 
 import java.io.Serializable;
 import java.util.HashMap;
@@ -20,16 +20,22 @@ public class ManageConversation implements Serializable {
 	public void modifyConversation(int nb, String username) {
 		if (!this.conversationToUser.containsKey(nb))
 			this.conversationToUser.put(nb, new LinkedList<String>());
-		this.conversationToUser.get(nb).add(username);
+		if (!this.conversationToUser.get(nb).contains(username))
+			this.conversationToUser.get(nb).add(username);
 		if (!this.userToConversation.containsKey(username))
 			this.userToConversation.put(username, new LinkedList<Integer>());
-		this.userToConversation.get(username).add(nb);
+		if (!this.userToConversation.get(username).contains(nb))
+			this.userToConversation.get(username).add(nb);
 	}
-	
+
+	public List<Integer> getConversationsFromUser(String username) {
+		return userToConversation.get(username);
+	}
+
 	public Map<Integer, List<String>> getConversationToUser() {
 		return conversationToUser;
 	}
-	
+
 	public Map<String, List<Integer>> getUserToConversation() {
 		return userToConversation;
 	}
