@@ -43,15 +43,15 @@ https://netbeans.org/downloads/index.html
 
 Dans NetBeans :
 New Project
-		Java Web
-		Web Application
-	Next
-		Projet name : Tier2
-	Next
-		Server : GlassFish
-		Java EE Version : 7
-		Context Path : /Tier2
-	Finish
+-> Java Web
+-> Web Application
+Next
+-> Projet name : Tier2
+Next
+-> Server : GlassFish
+-> Java EE Version : 7
+-> Context Path : /Tier2
+Finish
 
 Clic-droit sur le dossier Source Packages -> New -> Java Package...
 Vous nommez le package "main"
