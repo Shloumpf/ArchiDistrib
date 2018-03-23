@@ -42,7 +42,7 @@ https://netbeans.org/downloads/index.html
 ### Installation du projet
 
 Dans NetBeans :
-- New Project
++ New Project
 	-> Java Web
 	-> Web Application
 	Next
