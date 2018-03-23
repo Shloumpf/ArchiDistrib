@@ -17,6 +17,7 @@ https://www.eclipse.org/downloads/
 ### Installation du projet
 
 Il faut maintenant créer un nouveau projet dans File -> New -> Java Project
+
 Donnez-lui le nom qu'il vous plaira.
 
 Créez ensuite un nouveau package dans le dossier src appelé main.
@@ -42,18 +43,29 @@ https://netbeans.org/downloads/index.html
 ### Installation du projet
 
 Dans NetBeans :
+
 New Project
+
 -> Java Web
+
 -> Web Application
+
 Next
+
 -> Projet name : Tier2
+
 Next
+
 -> Server : GlassFish
+
 -> Java EE Version : 7
+
 -> Context Path : /Tier2
+
 Finish
 
 Clic-droit sur le dossier Source Packages -> New -> Java Package...
+
 Vous nommez le package "main"
 
 Vous pouvez ainsi recréer un second package nommé tier1
@@ -65,6 +77,7 @@ A présent, vous pouvez copier l'intégralité des fichiers de main et tier1 con
 Pour lancer le Tier 2, il suffit de faire :
 
 -> Clic-droit sur la racine du projet (Tier2) -> Clean and Build
+
 -> Clic-droit idem -> Run
 
 Un fenêtre de console "GlassFish Server 4.1.1" devrait apparaître, il suffit alors d'attendre le message :
